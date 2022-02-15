@@ -1,0 +1,75 @@
+.card {
+  border: 2px solid rgb(182, 182, 182);
+  background-color: rgb(20, 20, 20);
+  color: rgb(214, 213, 213);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  width: 25em;
+  height: 30em;
+  transition: 0.2s linear;
+}
+
+.image-card {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card-storyline {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: rgb(214, 213, 213);
+  font-size: 0.9rem;
+  position: relative;
+  padding: 15px;
+}
+
+.card-link::after,
+.card-link::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: transform .3s ease-in-out;
+}
+
+.card-link::before {
+  border-left: 1px solid rgb(214, 2, 2);
+  border-right: 1px solid rgb(214, 2, 2);
+  border-radius: 5px;
+  transform: scaleY(0);
+}
+
+.card-link::after{
+  border-bottom: 1px solid rgb(214, 2, 2);
+  border-top: 1px solid rgb(214, 2, 2);
+  border-radius: 5px;
+  transform: scaleX(0);
+}
+
+.card-link:hover::before {
+  transform: scaleY(1);
+}
+
+.card-link:hover::after {
+  transform: scaleX(1);
+}
+
+.card:hover {
+  transform: scale(1.02);
+  border: 2px solid rgb(170, 2, 2);
+}
